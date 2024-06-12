@@ -1,24 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <nav className='navbar navbar-light bg-light'>
+        <a className='navbar-brand' href='#'>
+          <img src={require('./logo-inverted.png')} width='80' height='50' style={{margin: "0 10px"}} className='d-inline-block align-top' alt='' />
         </a>
-        <h1>My first React Header!</h1>
-      </header>
+        
+      </nav>
     </div>
   );
 }
