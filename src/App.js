@@ -19,13 +19,12 @@ function App() {
             <li><a class="dropdown-item" href="#">Sorting</a></li>
           </ul>
         </div>
-
         {/* Signup/login div */}
         <div className='d-inline-block'>
-          <button className='btn bg-light ms-2'>
+          <button className='btn btn-light mx-2'>
             Sign Up
           </button>
-          <button className='btn bg-light me-2'>
+          <button className='btn btn-light me-2'>
             Login
           </button>
         </div>
