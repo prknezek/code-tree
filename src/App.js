@@ -59,6 +59,18 @@ function App() {
             <div className='col-1'></div>
           </div>
         </nav>
+        {/* Lesson Scroller */}
+        <div className='container-fluid p-0'>
+          <div className='row w-100'>
+            <div className='col-1'></div>
+            <div className='col-10'>
+              <div id='lesson-car' className='d-flex w-100'>
+                
+              </div>
+            </div>
+            <div className='col-1'></div>
+          </div>
+        </div>
       </div>
     </div>
   );
