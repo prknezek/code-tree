@@ -36,12 +36,12 @@ function App() {
           </a>
         </div>
         {/* Signup/login div */}
-        <div className='d-inline-block'>
-          <button className='btn btn-light mx-2'>
+        <div className='d-flex me-3'>
+          <button class='btn btn-light shadow-none' id='signup'>
             Sign Up
           </button>
-          <button className='btn btn-light me-2'>
-            Login
+          <button class='btn btn-light shadow-none' id='login'>
+            Log in
           </button>
         </div>
       </nav>
