@@ -19,9 +19,15 @@ function App() {
                 </a>
                 {/* Main nav links */}
                 <div className='d-flex me-auto align-items-center'>
+                  {/* Dashboard */}
                   <a className='nav-link' href='#'>
                     <span className='h6 text-dark'>Dashboard</span>
                   </a>
+                  {/* Flashcards */}
+                  <a className='nav-link' href='#'>
+                    <span className='h6 text-dark'>Flashcards</span>
+                  </a>
+                  {/* Lessons */}
                   <div className='dropdown'>
                     <a class="nav-link" href="#" id="tutorialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <span class="h6 dropdown-toggle text-dark">Lessons</span>
@@ -38,17 +44,14 @@ function App() {
                       <li><a className='dropdown-item' href='#'>Algorithms</a></li>
                     </ul>
                   </div>
-                  <a className='nav-link' href='#'>
-                    <span className='h6 text-dark'>Flashcards</span>
-                  </a>
+                  {/* Search bar */}
+                  <form className='d-flex align-items-center ms-4 mt-1'>
+                    <input id='search-input' className='form-control border-0 shadow-none' type='search' placeholder='Search lessons' aria-label='Search'></input>
+                    <button type='submit' className='btn shadow-none px-2'>
+                      <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
+                  </form>
                 </div>
-                {/* Search bar */}
-                <form className='d-flex align-items-center mt-1 me-2'>
-                  <input id='search-input' className='form-control border-0 shadow-none' type='search' placeholder='Search lessons' aria-label='Search'></input>
-                  <button type='submit' className='btn shadow-none px-2'>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                  </button>
-                </form>
                 {/* Signup/login div */}
                 <div className='d-flex'>
                   <button className='btn btn-light shadow-none' id='signup'>Sign Up</button>
