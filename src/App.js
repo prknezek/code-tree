@@ -1,4 +1,7 @@
 import './App.css';
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShuffle } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
@@ -13,16 +16,19 @@ function App() {
           {/* Tutorials Dropdown */}
           <div class="dropdown me-auto">
             <a class="nav-link" href="#" id="tutorialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="h6 dropdown-toggle text-dark">Tutorials</span>
+              <span class="h6 dropdown-toggle text-dark">Lessons</span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="tutorialDropdown">
+              <li><a class='dropdown-item' href='#'>
+                Random <FontAwesomeIcon icon={faShuffle} />
+              </a></li>
               <li><a class="dropdown-item" href="#">Linked Lists</a></li>
               <li><a class="dropdown-item" href="#">Arrays</a></li>
               <li><a class="dropdown-item" href="#">Sorting</a></li>
             </ul>
           </div>
           {/* Flashcards */}
-          <a class='nav-link'>
+          <a class='nav-link' href='#'>
             <span className='h6 text-dark'>Flashcards</span>
           </a>
         </div>
