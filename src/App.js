@@ -19,12 +19,15 @@ function App() {
               <span class="h6 dropdown-toggle text-dark">Lessons</span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="tutorialDropdown">
-              <li><a class='dropdown-item' href='#'>
-                Random <FontAwesomeIcon icon={faShuffle} />
-              </a></li>
-              <li><a class="dropdown-item" href="#">Linked Lists</a></li>
-              <li><a class="dropdown-item" href="#">Arrays</a></li>
-              <li><a class="dropdown-item" href="#">Sorting</a></li>
+              <li class='d-flex justify-content-end me-2'>
+                <button class='position-absolute btn btn-light'>
+                  <FontAwesomeIcon icon={faShuffle} />
+                </button>
+              </li>
+              <li><a class='dropdown-item' href='#'>All Lessons</a></li>
+              <li><a class="dropdown-item" href="#">Saved</a></li>
+              <li><a class="dropdown-item" href="#">Data Structures</a></li>
+              <li><a class="dropdown-item" href="#">Algorithms</a></li>
             </ul>
           </div>
           {/* Flashcards */}
