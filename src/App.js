@@ -25,7 +25,7 @@ function App() {
             <ul class="dropdown-menu" aria-labelledby="tutorialDropdown">
               <li class='d-flex justify-content-end me-2'>
                 <button class='position-absolute btn btn-light'>
-                  <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+                  <FontAwesomeIcon icon={faShuffle} />
                 </button>
               </li>
               <li><a class='dropdown-item' href='#'>All Lessons</a></li>
