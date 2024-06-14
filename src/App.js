@@ -1,7 +1,7 @@
 import './App.css';
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShuffle } from '@fortawesome/free-solid-svg-icons';
+import { faShuffle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
@@ -12,7 +12,11 @@ function App() {
           <img src={require('./logo-inverted.png')} width='80' height='50' className='d-inline-block align-top ms-2' alt='' />
         </a>
         {/* Main nav links */}
-        <div className='me-auto d-flex'>
+        <div className='me-auto d-flex align-items-center'>
+          {/* Dashboard */}
+          <a class='nav-link' href='#'>
+            <span className='h6 text-dark'>Dashboard</span>
+          </a>
           {/* Tutorials Dropdown */}
           <div class="dropdown me-auto">
             <a class="nav-link" href="#" id="tutorialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -21,7 +25,7 @@ function App() {
             <ul class="dropdown-menu" aria-labelledby="tutorialDropdown">
               <li class='d-flex justify-content-end me-2'>
                 <button class='position-absolute btn btn-light'>
-                  <FontAwesomeIcon icon={faShuffle} />
+                  <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
                 </button>
               </li>
               <li><a class='dropdown-item' href='#'>All Lessons</a></li>
@@ -35,6 +39,13 @@ function App() {
             <span className='h6 text-dark'>Flashcards</span>
           </a>
         </div>
+        {/* Search bar */}
+        <form class='d-flex align-items-center mt-1 me-3'>
+            <input id='search-input' class="form-control border-0 shadow-none" type="search" placeholder="Search lessons" aria-label="Search"></input>
+            <button type='submit' class='btn shadow-none px-2'>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
+          </form>
         {/* Signup/login div */}
         <div className='d-flex me-3'>
           <button class='btn btn-light shadow-none' id='signup'>
