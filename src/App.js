@@ -1,7 +1,10 @@
-import './App.css';
-import ReactDOM from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShuffle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+
+import './App.css';
+
+import LessonSwiper from './LessonSwiper/LessonSwiper';
 
 function App() {
   return (
@@ -15,7 +18,7 @@ function App() {
               <div className='d-flex align-items-center'>
                 {/* Logo */}
                 <a className='navbar-brand' href='#'>
-                  <img src={require('./logo-inverted.png')} width='80' height='50' className='d-inline-block align-top ms-2' alt='' />
+                  <img src={require('./imgs/logo-inverted.png')} width='80' height='50' className='d-inline-block align-top ms-2' alt='' />
                 </a>
                 {/* Main nav links */}
                 <div className='d-flex me-auto align-items-center'>
@@ -63,16 +66,14 @@ function App() {
           </div>
         </nav>
         {/* Lesson Scroller */}
-        <div className='container-fluid p-0'>
-          <div className='row w-100'>
-            <div className='col-1'></div>
-            <div className='col-10'>
-              <div id='lesson-car' className='d-flex w-100'>
-                
-              </div>
+        <div className='row w-100'>
+          <div className='col-1'></div>
+          <div className='col-10'>
+            <div id='lesson-swiper-container'>
+              <LessonSwiper />
             </div>
-            <div className='col-1'></div>
           </div>
+          <div className='col-1'></div>
         </div>
       </div>
     </div>
