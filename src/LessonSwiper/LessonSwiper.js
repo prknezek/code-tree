@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 import 'swiper/css';
@@ -9,7 +9,15 @@ import './lessonswiper.css';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
+const numSlides = 6;
+
 export default function LessonSwiper() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
+  };
+
   return (
     <>
       <Swiper 
@@ -26,18 +34,17 @@ export default function LessonSwiper() {
           clickable: true,
         }}
         navigation={true}
+        onSlideChange={handleSlideChange}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {/* Create numSlides SwiperSlide elements */}
+        {[...Array(numSlides).keys()].map((index) => (
+          <SwiperSlide 
+            key={index} 
+            className={index === activeIndex ? 'scale-up-center' : 'scale-down-center'}>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
