@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShuffle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
+import './navbar.css';
+
 export default function Navbar() {
     return (
         <nav className='navbar navbar-expand-lg navbar-light bg-light border-bottom border-2 text-dark'>
