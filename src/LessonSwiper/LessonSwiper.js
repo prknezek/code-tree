@@ -66,7 +66,6 @@ export default function LessonSwiper() {
             style={{ backgroundColor: colors[index], userSelect: 'none'}}
           >
             <h1>Slide {index + 1}</h1>
-            <h1>Hello</h1>
           </SwiperSlide>
         ))}
       </Swiper>
