@@ -1,18 +1,20 @@
+.lesson-slide {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 25px;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
+  border-radius: 25px;
   scale: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .swiper-slide img {
@@ -38,8 +40,8 @@
     }
 }
 .scale-up-center {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
 }
 @keyframes scale-down-center {
     0% {
@@ -52,5 +54,6 @@
       }
 }
 .scale-down-center {
-    animation: scale-down-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-down-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
+        animation: scale-down-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
 }
