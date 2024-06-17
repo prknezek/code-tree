@@ -15,9 +15,6 @@ function App() {
           <div className='col-1'></div>
           {/* Main content */}
           <div className='col-10'>
-            <div className='d-flex bg-warning p-2 align-items-center'>
-              <h1 className='m-0'>Featured Lessons:</h1>
-            </div>
             {/* Lesson Scroller */}
             <div id='lesson-swiper-container'>
               <LessonSwiper />
