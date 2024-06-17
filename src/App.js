@@ -1,7 +1,8 @@
-import './App.css';
-
 import Navbar from './Navbar/Navbar';
 import LessonSwiper from './LessonSwiper/LessonSwiper';
+
+import './App.css';
+import "@fontsource/poppins";
 
 function App() {
   return (
