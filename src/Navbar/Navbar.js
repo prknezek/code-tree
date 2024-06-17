@@ -55,7 +55,7 @@ export default function Navbar() {
                   </div>
                   <div className='d-flex ms-lg-auto search-login-wrapper'>
                     {/* Search bar */}
-                    <form className='d-flex align-items-center mt-1 me-2'>
+                    <form className='d-flex align-items-center mt-1 me-2 w-100'>
                       <input id='search-input' className='form-control border-0 shadow-none' type='search' placeholder='Search lessons' aria-label='Search'></input>
                       <button type='submit' className='btn shadow-none px-2'>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
