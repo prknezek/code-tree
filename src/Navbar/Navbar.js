@@ -5,7 +5,7 @@ import './navbar.css';
 
 export default function Navbar() {
     return (
-        <nav className='navbar navbar-expand-lg navbar-light bg-light border-bottom border-2 text-dark'>
+        <nav className='navbar navbar-expand-lg navbar-light bg-light text-dark sticky-top'>
           <div className='col-1'></div>
           <div className='col-10'>
             <div className='d-lg-flex align-items-center'>
