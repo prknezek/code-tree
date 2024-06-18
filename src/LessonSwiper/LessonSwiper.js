@@ -12,6 +12,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const numSlides = 5;
 const colors = ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#c8b6ff'];
+const lessonTitles = ['Big-O Notation', 'Recursion', 'Dynamic Programming', 'Greedy Algorithms', 'Graph Theory'];
 
 export default function LessonSwiper() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -65,7 +66,13 @@ export default function LessonSwiper() {
             }
             style={{ backgroundColor: colors[index], userSelect: 'none'}}
           >
-            <h1>Slide {index + 1}</h1>
+            <div className='card bg-transparent h-100'>
+              <img src={require('../imgs/logo.png')} className='card-img-top'></img>
+              <div className='card-body'>
+                <h5 className='card-title'>{lessonTitles[index]}</h5>
+                <p className='card-text'>This is a lesson on {lessonTitles[index]}</p>
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
