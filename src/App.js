@@ -16,12 +16,12 @@ function App() {
           {/* Main content */}
           <div className='col-10'>
             {/* Lesson Scroller */}
-            <div id='lesson-swiper-container'>
-              <LessonSwiper />
-            </div>
 
-            <div id='block-guy' className='bg-light'>
-              
+            <div id='block-guy'>
+              <h1>Learn DS&A, the easy way</h1>
+            </div>
+            <div id='lesson-swiper-container' className='bg-light'>
+              <LessonSwiper />
             </div>
           </div>
           <div className='col-1'></div>
