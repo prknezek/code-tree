@@ -33,6 +33,7 @@ body {
   height: 60vh;
   padding: 20px 0;
   overflow: hidden;
+  background-color: #495057;
 }
 
 #intro-container {
