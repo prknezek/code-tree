@@ -15,12 +15,18 @@ function App() {
           <div className='col-1'></div>
           {/* Main content */}
           <div className='col-10'>
-            {/* Lesson Scroller */}
-
-            <div id='block-guy'>
-              <h1>Learn DS&A, the easy way</h1>
+            <div id='intro-container' className='w-100 d-flex flex-lg-row flex-column p-lg-4 p-3'>
+              <div className='col-lg-7 pe-lg-4'>
+                <h1 className='mb-4 d-none d-md-block'>Learn DS&A, the easy way</h1>
+                <h3 className='mb-3'>Welcome to LearnDSA, your one-stop destination for mastering Data Structures and Algorithms.</h3>
+                <h3 className='d-none d-lg-block'>Our platform is designed to make learning DS&A engaging and effective, whether you're a complete beginner or preparing for a technical interview.</h3>
+              </div>
+              <div className='card bg-light col-lg-5 h-100'>
+                
+              </div>
             </div>
-            <div id='lesson-swiper-container' className='bg-light'>
+            {/* Lesson Scroller */}
+            <div id='lesson-swiper-container' className='bg-light bg-gradient'>
               <LessonSwiper />
             </div>
           </div>

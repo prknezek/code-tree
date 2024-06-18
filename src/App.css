@@ -35,7 +35,6 @@ body {
   overflow: hidden;
 }
 
-#block-guy {
-  padding: 20px;
+#intro-container {
   height: 70vh;
 }
