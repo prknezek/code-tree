@@ -19,6 +19,10 @@ function App() {
             <div id='lesson-swiper-container'>
               <LessonSwiper />
             </div>
+
+            <div id='block-guy' className='bg-light'>
+              
+            </div>
           </div>
           <div className='col-1'></div>
         </div>

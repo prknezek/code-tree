@@ -31,3 +31,7 @@ body {
   margin: 20px 0;
   overflow: hidden;
 }
+
+#block-guy {
+  height: 60vh;
+}
