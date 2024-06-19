@@ -7,7 +7,7 @@ export default function Footer() {
         <p class="col-md-4 mb-0 text-body-secondary">© 2024 LearnDSA</p>
 
         <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <img src={require('../../imgs/logo-dark.png')} className='bi me-2' width={80} height={50}></img>
+          <img src={require('../../imgs/logo-dark.png')} className='bi me-2' width={100} height={62}></img>
         </a>
 
         <ul class="nav col-md-4 justify-content-end">
