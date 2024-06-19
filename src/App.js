@@ -20,7 +20,6 @@ function App() {
               <div className='col-lg-7 pe-lg-4'>
                 <h1 className='mb-4 d-none d-md-block'>Learn DS&A, the easy way</h1>
                 <h3 className='mb-3'>Welcome to <span>LearnDSA</span>, your one-stop destination for mastering Data Structures and Algorithms.</h3>
-                <h3 className='d-none d-lg-block'>Our platform is designed to make learning DS&A engaging and effective, whether you're a complete beginner or preparing for a technical interview.</h3>
               </div>
               {/* Introduction Image */}
               <div className='card bg-light col-lg-5 h-100'>
