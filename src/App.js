@@ -1,5 +1,6 @@
 import Navbar from './Components/Navbar/Navbar';
 import LessonSwiper from './Components/LessonSwiper/LessonSwiper';
+import Footer from './Components/Footer/Footer';
 
 import './App.css';
 import "@fontsource/poppins";
@@ -32,6 +33,8 @@ function App() {
               <LessonSwiper />
             </div>
             <hr></hr>
+            {/* Footer */}
+            <Footer />
           </div>
           <div className='col-1'></div>
         </div>
