@@ -16,7 +16,7 @@ export default function Navbar() {
                 </button>
                 {/* Logo */}
                 <a className='navbar-brand' href='#'>
-                  <img src={require('../imgs/logo-inverted.png')} width='80' height='50' className='d-inline-block align-top ms-2' alt='' />
+                  <img src={require('../../imgs/logo-inverted.png')} width='80' height='50' className='d-inline-block align-top ms-2' alt='' />
                 </a>
                 {/* Signup/login div */}
                 <div className='d-flex ms-auto d-lg-none'>

@@ -1,5 +1,5 @@
-import Navbar from './Navbar/Navbar';
-import LessonSwiper from './LessonSwiper/LessonSwiper';
+import Navbar from './Components/Navbar/Navbar';
+import LessonSwiper from './Components/LessonSwiper/LessonSwiper';
 
 import './App.css';
 import "@fontsource/poppins";

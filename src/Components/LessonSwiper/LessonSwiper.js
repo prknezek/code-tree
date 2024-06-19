@@ -67,7 +67,7 @@ export default function LessonSwiper() {
             style={{ backgroundColor: colors[index], userSelect: 'none'}}
           >
             <div className='card bg-transparent h-100'>
-              <img src={require('../imgs/logo.png')} className='card-img-top'></img>
+              <img src={require('../../imgs/logo.png')} className='card-img-top'></img>
               <div className='card-body'>
                 <h5 className='card-title'>{lessonTitles[index]}</h5>
                 <p className='card-text'>This is a lesson on {lessonTitles[index]}</p>
