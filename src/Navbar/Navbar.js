@@ -10,14 +10,19 @@ export default function Navbar() {
           <div className='col-10'>
             <div className='d-lg-flex align-items-center'>
               <div className='d-flex small-wrapper'>
+                {/* Navbar toggler */}
+                <button class="me-3 ms-lg-0 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle nav items">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
                 {/* Logo */}
                 <a className='navbar-brand' href='#'>
                   <img src={require('../imgs/logo-inverted.png')} width='80' height='50' className='d-inline-block align-top ms-2' alt='' />
                 </a>
-                {/* Navbar toggler */}
-                <button class="ms-auto ms-lg-0 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle nav items">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+                {/* Signup/login div */}
+                <div className='d-flex ms-auto d-lg-none'>
+                  <button className='btn btn-light shadow-none' id='signup'>Sign Up</button>
+                  <button className='btn btn-light shadow-none' id='login'>Log in</button>
+                </div>
               </div>
               {/* Main nav links */}
               <div id='navItems' className='collapse navbar-collapse'>
@@ -62,7 +67,7 @@ export default function Navbar() {
                       </button>
                     </form>
                     {/* Signup/login div */}
-                    <div className='d-flex ms-auto'>
+                    <div className='d-lg-flex ms-auto d-none'>
                       <button className='btn btn-light shadow-none' id='signup'>Sign Up</button>
                       <button className='btn btn-light shadow-none' id='login'>Log in</button>
                     </div>
