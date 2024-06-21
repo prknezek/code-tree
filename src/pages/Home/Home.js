@@ -1,5 +1,5 @@
-import LessonSwiper from '../../Components/LessonSwiper/LessonSwiper';
-import Footer from '../../Components/Footer/Footer';
+import LessonSwiper from '../../components/LessonSwiper/LessonSwiper';
+import Footer from '../../components/Footer/Footer';
 
 import './home.css';
 
