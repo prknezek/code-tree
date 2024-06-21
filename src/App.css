@@ -28,14 +28,3 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-#lesson-swiper-container {
-  height: 60vh;
-  padding: 20px 0;
-  overflow: hidden;
-  background-color: #495057;
-}
-
-#intro-container {
-  height: 70vh;
-}

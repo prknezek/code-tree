@@ -22,7 +22,7 @@ export default function LessonSwiper() {
   };
 
   return (
-    <>
+    <div id='lesson-swiper-container'>
       <Swiper 
         loop={true}
         speed={1200}
@@ -76,6 +76,6 @@ export default function LessonSwiper() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }
