@@ -18,10 +18,16 @@ function App() {
       <div className='container-fluid p-0'>
         <Router>
           <Navbar />
-          <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route path='/lessons' element={<LessonHome />} />
-          </Routes>
+          <div className='row w-100'>
+            <div className='col-1'></div>
+            <div className='col-10'>
+              <Routes>
+                <Route exact path='/' element={<Home />} />
+                <Route path='/lessons' element={<LessonHome />} />
+              </Routes>
+            </div>
+            <div className='col-1'></div>
+          </div>
         </Router>
       </div>
     </div>
