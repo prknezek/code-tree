@@ -10,6 +10,7 @@ import './App.css';
 import "@fontsource/poppins";
 
 import Home from './pages/Home/Home';
+import LessonHome from './pages/LessonHome/LessonHome';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route exact path='/' element={<Home />} />
+            <Route path='/lessons' element={<LessonHome />} />
           </Routes>
         </Router>
       </div>

@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShuffle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 import './navbar.css';
 
@@ -15,9 +16,9 @@ export default function Navbar() {
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 {/* Logo */}
-                <a className='navbar-brand' href='#'>
+                <NavLink className='navbar-brand' to='/'>
                   <img src={require('../../assets/imgs/logo-inverted.png')} width='80' height='50' className='d-inline-block align-top ms-2' alt='' />
-                </a>
+                </NavLink>
                 {/* Signup/login div */}
                 <div className='d-flex ms-auto d-lg-none'>
                   <button className='btn btn-light shadow-none' id='signup'>Sign Up</button>
@@ -42,7 +43,7 @@ export default function Navbar() {
                     </li>
                     {/* Lessons */}
                     <li className='nav-item dropdown'>
-                      <a class="nav-link" href="#" id="tutorialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="nav-link" id="tutorialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <span class="h6 dropdown-toggle text-dark">Lessons</span>
                       </a>
                       <ul className='dropdown-menu mb-3' aria-labelledby='tutorialDropdown'>
@@ -51,7 +52,7 @@ export default function Navbar() {
                             <FontAwesomeIcon icon={faShuffle} />
                           </button>
                         </li>
-                        <li><a className='dropdown-item' href='#'>All Lessons</a></li>
+                        <li><NavLink className='dropdown-item' to='/lessons'>All Lessons</NavLink></li>
                         <li><a className='dropdown-item' href='#'>Saved</a></li>
                         <li><a className='dropdown-item' href='#'>Data Structures</a></li>
                         <li><a className='dropdown-item' href='#'>Algorithms</a></li>
