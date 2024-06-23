@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 import {
   BrowserRouter as Router,
@@ -24,7 +25,9 @@ function App() {
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route path='/lessons' element={<LessonHome />} />
+                <Route path='/lessons/:lessonId' element={<LessonHome />} />
               </Routes>
+              <Footer />
             </div>
             <div className='col-1'></div>
           </div>

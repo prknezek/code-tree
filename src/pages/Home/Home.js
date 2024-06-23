@@ -1,5 +1,4 @@
 import LessonSwiper from '../../components/LessonSwiper/LessonSwiper';
-import Footer from '../../components/Footer/Footer';
 
 import './home.css';
 
@@ -20,8 +19,6 @@ export default function Home() {
       
       <hr></hr>
       <LessonSwiper />
-      <hr></hr>
-      <Footer />
     </div>
   );
 }
