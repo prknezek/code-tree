@@ -1,5 +1,6 @@
 #card-container {
     max-width: 35rem;
+    position: relative;
 }
 
 .icon {
@@ -11,6 +12,47 @@
     align-items: center;
     justify-content: center;
     font-size: 39px
+}
+
+.favorite-button {
+    background: none;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge {
+    display: inline-block;
+}
+
+.star-icon {
+    color: #ccc;
+    font-size: 1.5em;
+}
+  
+.star-icon.favorite {
+    color: gold;
+}
+
+@media (max-width: 576px) {
+    .d-flex.align-items-center .badge {
+      order: 2;
+      margin-top: 0.5em;
+    }
+  
+    .favorite-button {
+      position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+      order: 1;
+    }
+
+    .card-title {
+        padding-right: 2.8rem;
+    }
 }
 
 .badge span {
