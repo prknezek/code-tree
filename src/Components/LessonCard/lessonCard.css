@@ -1,6 +1,20 @@
 #card-container {
-    max-width: 35rem;
     position: relative;
+}
+
+#card-header, #card-subheader, #card-link-container {
+    height: 40px;
+}
+
+#card-description {
+    height: 200px;
+    overflow-y: hidden;
+}
+
+#card-link {
+    color: white;
+    background: #ffcd1a;
+    border-radius: 10px;
 }
 
 .icon {
@@ -37,7 +51,7 @@
     color: gold;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     .d-flex.align-items-center .badge {
       order: 2;
       margin-top: 0.5em;
