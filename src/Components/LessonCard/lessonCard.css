@@ -7,7 +7,8 @@
 }
 
 #card-description {
-    height: 200px;
+    font-size: 22px;
+    height: 150px;
     overflow-y: hidden;
 }
 

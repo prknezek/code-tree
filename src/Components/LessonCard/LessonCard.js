@@ -3,6 +3,7 @@ import { faArrowRight, faStar } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 
 import './lessonCard.css';
+import 'animate.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LessonCard = (props) => {
@@ -19,7 +20,7 @@ const LessonCard = (props) => {
   };
 
   return (
-    <div className='col-lg-4 col-md-6 col-12 mt-4'>
+    <div className='col-lg-6 col-md-6 col-12 mt-4'>
       <div className='card p-4 text-dark shadow-pop-bl' id='card-container'>
         <div className='d-flex justify-content-between flex-column'>
           <div className='d-flex align-items-center' id='card-header'>
@@ -30,7 +31,7 @@ const LessonCard = (props) => {
           </div>
           <div className='mt-3 d-flex align-items-center' id='card-subheader'>
             <div className='badge'><span>{category}</span></div>
-            <button className='favorite-button' onClick={handleFavoriteClick}>
+            <button className='favorite-button animate__animated  animate__swing' onClick={handleFavoriteClick}>
               <FontAwesomeIcon icon={faStar} className={`star-icon ${isFavorite ? 'favorite' : ''}`} />
             </button>
           </div>
