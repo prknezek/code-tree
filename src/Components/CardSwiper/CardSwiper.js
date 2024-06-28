@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import './lessonswiper.css';
+import './cardswiper.css';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -14,7 +14,7 @@ const numSlides = 5;
 const colors = ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#c8b6ff'];
 const lessonTitles = ['Big-O Notation', 'Recursion', 'Dynamic Programming', 'Greedy Algorithms', 'Graph Theory'];
 
-export default function LessonSwiper() {
+export default function CardSwiper() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleSlideChange = (swiper) => {
@@ -44,10 +44,6 @@ export default function LessonSwiper() {
               slidesPerView: 1,
               spaceBetween: 10,
             },
-            900: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
             1280: {
               slidesPerView: 3,
               spaceBetween: 30,
@@ -67,7 +63,7 @@ export default function LessonSwiper() {
             style={{ backgroundColor: colors[index], userSelect: 'none'}}
           >
             <div className='card bg-transparent h-100'>
-              <img src={require('../../assets/imgs/logo.png')} className='card-img-top'></img>
+              <img src={require('../../assets/imgs/logo.png')} className='card-img-top' alt='descriptive text'></img>
               <div className='card-body'>
                 <h5 className='card-title'>{lessonTitles[index]}</h5>
                 <p className='card-text'>This is a lesson on {lessonTitles[index]}</p>

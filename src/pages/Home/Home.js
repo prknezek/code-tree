@@ -1,4 +1,4 @@
-import LessonSwiper from '../../components/LessonSwiper/LessonSwiper';
+import LessonSwiper from '../../components/CardSwiper/CardSwiper';
 
 import './home.css';
 

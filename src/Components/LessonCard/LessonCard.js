@@ -6,7 +6,7 @@ import './lessonCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LessonCard = (props) => {
-  const { title, category, description, completion, lessonId } = props;
+  const { title, category, description, completion, lessonId, img_url } = props;
   const [isFavorite, setIsFavorite] = useState(false);
 
   const progressBarStyle = {
@@ -23,7 +23,7 @@ const LessonCard = (props) => {
       <div className='d-flex justify-content-between flex-sm-row flex-column'>
         <div className='d-flex align-items-center'>
           <div className='icon'>
-            <img src={require('../../assets/icons/linked-list.svg').default} width={'40px'} alt='Linked List' />
+            <img src={require(`../../assets/icons/${img_url}`)} width={'40px'} alt='Linked List' />
           </div>
           <h2 className='card-title ms-3 m-0'>{title}</h2>
         </div>

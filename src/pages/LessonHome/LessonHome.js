@@ -9,6 +9,7 @@ export default function LessonHome() {
         description='A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers.'
         completion='100'
         lessonId='linked-list'
+        img_url='linked-list.svg'
       />
       <LessonCard 
         title='Arrays' 
@@ -16,6 +17,7 @@ export default function LessonHome() {
         description='An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together.'
         completion='35'
         lessonId='arrays'
+        img_url='linked-list.svg'
       />
     </div>
   );
