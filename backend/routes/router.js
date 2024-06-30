@@ -2,11 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/users', (req, res) => {
-    const userData = 
-    [
-        
-    ];
-    res.send();
+    console.log(req.body);
+    res.send("Response received: " + req.body);
 });
 
 module.exports = router;
