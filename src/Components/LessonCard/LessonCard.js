@@ -31,7 +31,7 @@ const LessonCard = (props) => {
           </div>
           <div className='mt-3 d-flex align-items-center' id='card-subheader'>
             <div className='badge'><span>{category}</span></div>
-            <button className='favorite-button animate__animated  animate__swing' onClick={handleFavoriteClick}>
+            <button className='favorite-button' onClick={handleFavoriteClick}>
               <FontAwesomeIcon icon={faStar} className={`star-icon ${isFavorite ? 'favorite' : ''}`} />
             </button>
           </div>
