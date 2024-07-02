@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShuffle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+import Login from '../GoogleOAuth/Login';
 
 import './navbar.css';
 
@@ -12,8 +13,8 @@ export default function Navbar() {
             <div className='d-lg-flex align-items-center'>
               <div className='d-flex small-wrapper'>
                 {/* Navbar toggler */}
-                <button class="me-3 ms-lg-0 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle nav items">
-                  <span class="navbar-toggler-icon"></span>
+                <button className="me-3 ms-lg-0 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle nav items">
+                  <span className="navbar-toggler-icon"></span>
                 </button>
                 {/* Logo */}
                 <NavLink className='navbar-brand' to='/'>
@@ -21,7 +22,8 @@ export default function Navbar() {
                 </NavLink>
                 {/* Signup/login div */}
                 <div className='d-flex ms-auto d-lg-none'>
-                  <button className='btn btn-light shadow-none' id='signup'>Sign Up</button>
+                  {/* <button className='btn btn-light shadow-none' id='signup'>Sign Up</button> */}
+                  <Login />
                   <button className='btn btn-light shadow-none' id='login'>Log in</button>
                 </div>
               </div>
@@ -43,8 +45,8 @@ export default function Navbar() {
                     </li>
                     {/* Lessons */}
                     <li className='nav-item dropdown'>
-                      <a class="nav-link" id="tutorialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="h6 dropdown-toggle text-dark">Lessons</span>
+                      <a className="nav-link" id="tutorialDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span className="h6 dropdown-toggle text-dark">Lessons</span>
                       </a>
                       <ul className='dropdown-menu mb-3' aria-labelledby='tutorialDropdown'>
                         <li className='d-flex justify-content-end me-2'>
@@ -69,7 +71,7 @@ export default function Navbar() {
                     </form>
                     {/* Signup/login div */}
                     <div className='d-lg-flex ms-auto d-none'>
-                      <button className='btn btn-light shadow-none' id='signup'>Sign Up</button>
+                      <Login />
                       <button className='btn btn-light shadow-none' id='login'>Log in</button>
                     </div>
                   </div>

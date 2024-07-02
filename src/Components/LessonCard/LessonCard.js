@@ -3,7 +3,6 @@ import { faArrowRight, faStar } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 
 import './lessonCard.css';
-import 'animate.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LessonCard = (props) => {
