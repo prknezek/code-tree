@@ -20,7 +20,7 @@
     color: white;
   }
   
-  #signup {
+  #signup, #logout {
     z-index: 2;
     position: relative;
     border-radius: 25px;

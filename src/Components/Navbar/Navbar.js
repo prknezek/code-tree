@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShuffle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
-import Login from '../GoogleOAuth/Login';
+import Signup from '../User/Signup';
 
 import './navbar.css';
 
@@ -22,9 +22,8 @@ export default function Navbar() {
                 </NavLink>
                 {/* Signup/login div */}
                 <div className='d-flex ms-auto d-lg-none'>
-                  {/* <button className='btn btn-light shadow-none' id='signup'>Sign Up</button> */}
-                  <Login />
-                  <button className='btn btn-light shadow-none' id='login'>Log in</button>
+                  <Signup />
+                  {/* <button className='btn btn-light shadow-none' id='login'>Log in</button> */}
                 </div>
               </div>
               {/* Main nav links */}
@@ -33,13 +32,13 @@ export default function Navbar() {
                   <div className='d-lg-flex main-links-wrapper'>
                     {/* Dashboard */}
                     <li className='nav-item'>
-                      <a className='nav-link' href='#'>
+                      <a className='nav-link'>
                         <span className='h6 text-dark'>Dashboard</span>
                       </a>
                     </li>
                     {/* Flashcards */}
                     <li className='nav-item'>
-                      <a className='nav-link' href='#'>
+                      <a className='nav-link'>
                         <span className='h6 text-dark'>Flashcards</span>
                       </a>
                     </li>
@@ -55,9 +54,9 @@ export default function Navbar() {
                           </button>
                         </li>
                         <li><NavLink className='dropdown-item' to='/lessons'>All Lessons</NavLink></li>
-                        <li><a className='dropdown-item' href='#'>Saved</a></li>
-                        <li><a className='dropdown-item' href='#'>Data Structures</a></li>
-                        <li><a className='dropdown-item' href='#'>Algorithms</a></li>
+                        <li><a className='dropdown-item'>Saved</a></li>
+                        <li><a className='dropdown-item'>Data Structures</a></li>
+                        <li><a className='dropdown-item'>Algorithms</a></li>
                       </ul>
                     </li>
                   </div>
@@ -71,8 +70,8 @@ export default function Navbar() {
                     </form>
                     {/* Signup/login div */}
                     <div className='d-lg-flex ms-auto d-none'>
-                      <Login />
-                      <button className='btn btn-light shadow-none' id='login'>Log in</button>
+                      <Signup />
+                      {/* <button className='btn btn-light shadow-none' id='login'>Log in</button> */}
                     </div>
                   </div>
                 </ul>
