@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useParams,
 } from "react-router-dom";
 
 import './App.css';
@@ -13,6 +12,8 @@ import "@fontsource/poppins";
 
 import Home from './pages/Home/Home';
 import LessonHome from './pages/LessonHome/LessonHome';
+import Lesson from './components/LessonComponents/Lesson';
+import InsertLesson from './forms/InsertLesson';
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route path='/lessons' element={<LessonHome />} />
-                <Route path='lessons/:lessonId' element={<Child />} />
+                <Route path='lessons/:lessonId' element={<Lesson />} />
+                <Route path='/insert-lesson' element={<InsertLesson />} />
               </Routes>
               <Footer />
             </div>
@@ -34,18 +36,6 @@ function App() {
           </div>
         </Router>
       </div>
-    </div>
-  );
-}
-
-function Child() {
-  // We can use the `useParams` hook here to access
-  // the dynamic pieces of the URL.
-  let { lessonId } = useParams();
-
-  return (
-    <div>
-      <h3>ID: {lessonId}</h3>
     </div>
   );
 }
