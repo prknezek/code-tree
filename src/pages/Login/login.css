@@ -1,0 +1,8 @@
+.google-signup {
+  background-color: #ffcd1a !important;
+  border-radius: 25px !important;
+}
+
+.google-signup:hover {
+  background-color: #fac80c !important;
+}

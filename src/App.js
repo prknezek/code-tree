@@ -14,6 +14,7 @@ import Home from './pages/Home/Home';
 import LessonHome from './pages/LessonHome/LessonHome';
 import Lesson from './components/LessonComponents/Lesson';
 import InsertLesson from './forms/InsertLesson';
+import Login from './pages/Login/Login';
 
 function App() {
   return (
@@ -27,8 +28,9 @@ function App() {
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route path='/lessons' element={<LessonHome />} />
-                <Route path='lessons/:lessonId' element={<Lesson />} />
+                <Route path='/lessons/:lessonId' element={<Lesson />} />
                 <Route path='/insert-lesson' element={<InsertLesson />} />
+                <Route path='/login' element={<Login />} />
               </Routes>
               <Footer />
             </div>

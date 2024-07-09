@@ -5,6 +5,7 @@ const router = express.Router();
 const axios = require('axios');
 const pool = require('../database');
 
+// Google OAuth route
 router.post('/api/auth/google', async (req, res) => {
   const { code } = req.body;
   const client_id = process.env.REACT_APP_OAUTH_CLIENT_ID;

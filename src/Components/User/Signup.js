@@ -1,11 +1,15 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
+import GoogleIcon from '../../assets/icons/google.svg';
+
 import { UserContext } from './UserContext';
+import { useNavigate } from 'react-router-dom'; 
+import { useGoogleLogin } from '@react-oauth/google';
 
 function Signup() {
   const { user, handleLoginSuccess, handleLogout } = useContext(UserContext);
   const hasFetchedUser = useRef(false); // Add a ref to keep track of API call
+  const navigate = useNavigate();
 
   useEffect(() => {
     const createUserInBackend = async () => {
@@ -34,6 +38,7 @@ function Signup() {
       })
       .then(response => {
         handleLoginSuccess(response.data);
+        navigate('/');
       })
       .catch(error => {
         console.error('Error:', error);
@@ -54,8 +59,9 @@ function Signup() {
           </button>
         </div>
       ) : (
-        <button onClick={googleLogin} className='btn btn-light shadow-none' id='signup'>
-          Sign Up
+        <button onClick={googleLogin} className='btn btn-light shadow-none google-signup text-light'>
+          <span className='me-2'><b>Google</b></span>
+          <img src={GoogleIcon} width='30' height='30' alt='Google login button' />
         </button>
       )}
     </>

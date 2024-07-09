@@ -20,7 +20,7 @@
     color: white;
   }
   
-  #signup, #logout {
+  #signup {
     z-index: 2;
     position: relative;
     border-radius: 25px;
@@ -29,6 +29,7 @@
     font-weight: 600;
     text-wrap: nowrap;
     color: white;
+    height: 100%;
     background-color: #ffcd1a;
   }
   
