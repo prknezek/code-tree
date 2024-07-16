@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext } from 'react';
 import axios from 'axios';
 import GoogleIcon from '../../assets/icons/google.svg';
 
@@ -7,29 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { useGoogleLogin } from '@react-oauth/google';
 
 function Signup() {
-  const { user, handleLoginSuccess, handleLogout } = useContext(UserContext);
-  const hasFetchedUser = useRef(false); // Add a ref to keep track of API call
+  const { user, handleLoginSuccess } = useContext(UserContext);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const createUserInBackend = async () => {
-      if (user && !hasFetchedUser.current) { // Check if user exists and API call hasn't been made
-        hasFetchedUser.current = true; // Update ref to prevent further API calls
-        try {
-          const response = await axios.post('http://localhost:4000/api/users', {
-            email: user.profile.email,
-            google_id: user.profile.sub,
-            img: user.profile.picture,
-          });
-          console.log('User successfully created / retrieved');
-        } catch (error) {
-          console.error('Error creating user in backend:', error);
-        }
-      }
-    };
-
-    createUserInBackend();
-  }, [user]);
 
   const googleLogin = useGoogleLogin({
     onSuccess: (codeResponse) => {
