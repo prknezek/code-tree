@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LessonBlock from "./LessonBlock";
+import CodeEditor from './CodeEditor';
 import axios from 'axios';
 
 import {
@@ -39,14 +40,15 @@ function Lesson() {
   }
 
   // Display error screen if data fetching fails
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error}</div>;
+  // }
 
   // Display lesson data
   return (
-    <div className='d-flex justify-content-center align-items-center flex-column container bg-danger w-100 h-100 mt-4 p-0'>
-      <LessonBlock lessonId={lessonId} />
+    <div className='d-flex align-items-center flex-column container bg-danger w-100 h-100 mt-4 p-0'>
+      {/* <LessonBlock lessonId={lessonId} /> */}
+      <CodeEditor />
     </div>
   );
 }
