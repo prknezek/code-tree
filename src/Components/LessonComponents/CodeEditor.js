@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 
 import { vscodeDark } from "@uiw/codemirror-theme-vscode";
-import { loadLanguage, langs } from '@uiw/codemirror-extensions-langs';
+import { loadLanguage } from '@uiw/codemirror-extensions-langs';
 
 function CodeEditor() {
   const langNames = ['c', 'csharp', 'javascript', 'python', 'java', 'cpp'];
