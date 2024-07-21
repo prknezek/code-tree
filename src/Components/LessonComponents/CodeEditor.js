@@ -5,13 +5,13 @@ import { vscodeDark } from "@uiw/codemirror-theme-vscode";
 import { loadLanguage } from '@uiw/codemirror-extensions-langs';
 
 function CodeEditor() {
-  const langNames = ['c', 'csharp', 'javascript', 'python', 'java', 'cpp'];
+  const langNames = {'c': 'C', 'csharp': 'C#', 'javascript': 'JavaScript', 'python': 'Python3', 'java': 'Java', 'cpp': 'C++'};
   var [language, setLanguage] = useState(loadLanguage('python'));
-  var [langName, setLangName] = useState('Python');
+  var [langName, setLangName] = useState('Python3');
 
   const handleLanguageChange = (lang) => {
     setLanguage(loadLanguage(lang));
-    setLangName(lang.charAt(0).toUpperCase() + lang.slice(1));
+    setLangName(langNames[lang]);
   };
 
   return (
@@ -22,11 +22,16 @@ function CodeEditor() {
             {langName}
           </button>
           <ul class="dropdown-menu">
-            {langNames.map((lang) => (
+            {Object.entries(langNames).map(([lang, name]) => (
+              <li key={lang}>
+                <button onClick={() => handleLanguageChange(lang)} className="dropdown-item" href="#">{name}</button>
+              </li>
+            ))}
+            {/* {langNames.keys().map((lang) => (
               <li key={lang}>
                 <button onClick={() => handleLanguageChange(lang)} className="dropdown-item" href="#">{lang.charAt(0).toUpperCase() + lang.slice(1)}</button>
               </li>
-            ))}
+            ))} */}
           </ul>
         </div>
       </div>
