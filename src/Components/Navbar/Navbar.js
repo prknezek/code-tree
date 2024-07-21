@@ -1,13 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShuffle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../User/UserContext';
 
 import './navbar.css';
 
 export default function Navbar() {
   const { user } = useContext(UserContext);
+  const [isCollapse, setIsCollapse] = useState('');
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 992) {
+        setIsCollapse('collapse');
+      } else {
+        setIsCollapse('');
+      }
+    }
+    // Call function once when component mounts to set initial state
+    handleResize();
+    window.addEventListener('resize', handleResize);
+  })
 
   return (
       <nav className='navbar navbar-expand-lg navbar-light bg-light text-dark sticky-top'>
@@ -66,10 +80,26 @@ export default function Navbar() {
                           <FontAwesomeIcon icon={faShuffle} />
                         </button>
                       </li>
-                      <li><NavLink className='dropdown-item' to='/lessons'>All Lessons</NavLink></li>
-                      <li><a className='dropdown-item'>Saved</a></li>
-                      <li><a className='dropdown-item'>Data Structures</a></li>
-                      <li><a className='dropdown-item'>Algorithms</a></li>
+                      <li>
+                        <NavLink className='dropdown-item' to='/lessons'>
+                          <span type='button' data-bs-toggle={isCollapse} data-bs-target="#navItems">All Lessons</span>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink className='dropdown-item' to='/lessons'>
+                          <span type='button' data-bs-toggle={isCollapse} data-bs-target="#navItems">Favorited</span>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink className='dropdown-item' to='/lessons'>
+                          <span type='button' data-bs-toggle={isCollapse} data-bs-target="#navItems">Data Structures</span>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink className='dropdown-item' to='/lessons'>
+                          <span type='button' data-bs-toggle={isCollapse} data-bs-target="#navItems">Algorithms</span>
+                        </NavLink>
+                      </li>
                     </ul>
                   </li>
                 </div>
