@@ -5,7 +5,8 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const hasFetchedUser = useRef(false); // Add a ref to keep track of API call
+  const [isLoading, setIsLoading] = useState(true);
+  const hasFetchedUser = useRef(false);
 
   // When user value changes to non null, update local storage 
   useEffect(() => {
@@ -21,6 +22,7 @@ export const UserProvider = ({ children }) => {
       console.log('User found in local storage:', loggedInUser);
       setUser(JSON.parse(loggedInUser));
     }
+    setIsLoading(false);
   }, []);
 
   // Function to handle login success
@@ -55,7 +57,7 @@ export const UserProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, handleLoginSuccess, handleLogout }}>
+    <UserContext.Provider value={{ user, isLoading, handleLoginSuccess, handleLogout }}>
       {children}
     </UserContext.Provider>
   );

@@ -7,7 +7,7 @@ import { UserContext } from '../User/UserContext';
 import './navbar.css';
 
 export default function Navbar() {
-  const { user } = useContext(UserContext);
+  const { user, isLoading } = useContext(UserContext);
   const [isCollapse, setIsCollapse] = useState('');
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Navbar() {
               </NavLink>
               {/* Signup/login div */}
               <div className='d-flex ms-auto d-lg-none'>
-                {user ? (
+                {!isLoading && (user ? (
                   <div className="d-flex align-items-center justify-content-center ms-2">
                     <button className='btn btn-light border-0 rounded-circle p-0'>
                       <img src={require('../../assets/imgs/profile.png')} width='50' height='50' alt='' />
@@ -49,7 +49,7 @@ export default function Navbar() {
                   <NavLink to='/login'>
                     <button className='btn btn-light shadow-none' id='signup'>Sign Up</button>
                   </NavLink>
-                )}
+                ))}
                 {/* <button className='btn btn-light shadow-none' id='login'>Log in</button> */}
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function Navbar() {
                   </form>
                   {/* Signup/login div */}
                   <div className='d-lg-flex ms-auto d-none'>
-                    {user ? (
+                    {!isLoading && (user ? (
                       <div className="d-flex align-items-center justify-content-center ms-2">
                         <button className='btn btn-light border-0 rounded-circle p-0'>
                           <img src={require('../../assets/imgs/profile.png')} width='50' height='50' alt='' />
@@ -123,7 +123,7 @@ export default function Navbar() {
                       <NavLink to='/login'>
                         <button className='btn btn-light shadow-none' id='signup'>Sign Up</button>
                       </NavLink>
-                    )}
+                    ))}
                     {/* <button className='btn btn-light shadow-none' id='login'>Log in</button> */}
                   </div>
                 </div>
