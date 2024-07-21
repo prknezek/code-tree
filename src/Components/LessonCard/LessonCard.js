@@ -20,7 +20,7 @@ const LessonCard = (props) => {
 
   return (
     <div className='col-lg-6 col-md-6 col-12 mt-4'>
-      <div className='card p-4 text-dark shadow-pop-bl' id='card-container'>
+      <div className='card p-4 text-dark' id='card-container'>
         <div className='d-flex justify-content-between flex-column'>
           <div className='d-flex align-items-center' id='card-header'>
             <div className='icon'>
