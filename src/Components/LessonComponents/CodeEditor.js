@@ -15,7 +15,7 @@ function CodeEditor() {
   };
 
   return (
-    <div className="w-100 p-lg-3 px-lg-5 rounded">
+    <div className="w-100 p-lg-3 px-lg-5">
       <div className="bg-dark py-2 ps-2">
         <div class="btn-group">
           <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,11 +27,6 @@ function CodeEditor() {
                 <button onClick={() => handleLanguageChange(lang)} className="dropdown-item" href="#">{name}</button>
               </li>
             ))}
-            {/* {langNames.keys().map((lang) => (
-              <li key={lang}>
-                <button onClick={() => handleLanguageChange(lang)} className="dropdown-item" href="#">{lang.charAt(0).toUpperCase() + lang.slice(1)}</button>
-              </li>
-            ))} */}
           </ul>
         </div>
       </div>
